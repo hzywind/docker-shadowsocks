@@ -7,7 +7,7 @@ RUN apt-get update \
 && mkdir /etc/ss
 
 RUN wget -q -O - https://github.com/jedisct1/libsodium/releases/download/1.0.10/libsodium-1.0.10.tar.gz | tar -xzf - -C /etc/ss \
-&& cd /etc/ss \
+&& cd /etc/ss/libsodium-1.0.10 \
 && ./configure \
 && make && make install \
 && ./ldconfig
