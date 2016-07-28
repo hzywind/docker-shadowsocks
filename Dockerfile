@@ -10,7 +10,7 @@ RUN wget -q -O - https://github.com/jedisct1/libsodium/releases/download/1.0.10/
 && cd /etc/ss/libsodium-1.0.10 \
 && ./configure \
 && make && make install \
-&& ./ldconfig
+&& ldconfig
 
 ENTRYPOINT ["/usr/local/bin/ssserver"]
 
